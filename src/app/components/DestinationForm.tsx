@@ -1,13 +1,24 @@
+'use client';
 import Image from 'next/image';
 import img from "../assets/logo.png";
 import lotus from "../assets/lotus temple.jpg";
 import Beach from "../assets/beach.jpg"; 
 import Desert from "../assets/desert.jpg"; 
 import Mountain from "../assets/mountain.jpg"; 
-import Temple from "../assets/temple.jpg";  
+import Temple from "../assets/temple.jpg";
+import { useRouter } from "next/navigation"; 
 
 export default function Home() {
-  // const [search, setSearch] = useState({ location: '', date: '', guests: '' });
+  const router = useRouter();
+
+  const handleSignup = () => {
+    try {
+      router.push("/signup");
+    } catch (error) {
+      console.error("Navigation error:", error);
+    }
+  };
+
 
   return (
     <div className="min-h-screen bg-white font-sans">
@@ -24,7 +35,7 @@ export default function Home() {
           <a href="#" className="text-gray-600 hover:text-black">Booking</a>
           <a href="#" className="text-gray-600 hover:text-black">Categories</a>
           <a href="#" className="text-gray-600 hover:text-black">About</a>
-          <button className="bg-black hover:bg-gray-600 text-white px-4 py-2 cursor-pointer rounded-full">Sign Up</button>
+          <button onClick={handleSignup} className="bg-black hover:bg-gray-600 text-white px-4 py-2 cursor-pointer rounded-full">Sign Up</button>
         </nav>
       </header>
 
