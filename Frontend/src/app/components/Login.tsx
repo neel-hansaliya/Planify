@@ -23,7 +23,10 @@ export default function Login() {
     setTimeout(() => {
       console.log("Login Data:", formData);
       setLoading(false);
-      router.push("/");
+
+      // Set the authentication status after login
+      localStorage.setItem("isAuthenticated", "true");
+      router.push("/"); // Redirect to home
     }, 2000);
   };
 
@@ -31,12 +34,26 @@ export default function Login() {
     <div className="min-h-screen text-black flex items-center justify-center bg-gray-100">
       <div className="flex w-[800px] h-[450px] bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="w-1/2 relative">
-          <Image src={adventure} alt="Adventure" layout="fill" objectFit="cover" className="rounded-l-lg" />
+          <Image
+            src={adventure}
+            alt="Adventure"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-l-lg"
+          />
         </div>
 
         <div className="w-1/2 p-7 gap-2 flex flex-col justify-center">
-          <Image src={img} alt="Logo" width={80} height={80} className="mx-auto mb-3" />
-          <h2 className="text-2xl font-bold text-center mb-4">Welcome Back to Planify</h2>
+          <Image
+            src={img}
+            alt="Logo"
+            width={80}
+            height={80}
+            className="mx-auto mb-3"
+          />
+          <h2 className="text-2xl font-bold text-center mb-4">
+            Welcome Back to Planify
+          </h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
@@ -70,7 +87,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full mt-2 py-2 bg-black text-white rounded hover:bg-gray-700 flex justify-center items-center gap-2"
+              className="w-full mt-2 py-2 bg-black cursor-pointer text-white rounded hover:bg-gray-700 flex justify-center items-center gap-2"
             >
               {loading ? (
                 <>
@@ -84,7 +101,10 @@ export default function Login() {
           </form>
 
           <p className="text-center mt-1 text-gray-600">
-            Do not have an account? <Link href="/signup" className="text-blue-500 hover:underline">Signup</Link>
+            Do not have an account?{" "}
+            <Link href="/signup" className="text-blue-500 hover:underline">
+              Signup
+            </Link>
           </p>
         </div>
       </div>
