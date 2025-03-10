@@ -1,34 +1,3 @@
-# from fastapi import FastAPI
-# from fastapi.middleware.cors import CORSMiddleware
-
-# app = FastAPI()
-
-# # CORS Policy
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["*"],  # Allow frontend requests
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
-
-# # Fake Destination Data
-# destinations_data = {
-#     "India": ["Taj Mahal", "Jaipur", "Goa", "Kerala"],
-#     "Japan": ["Mount Fuji", "Tokyo Tower", "Kyoto Temples"],
-#     "France": ["Eiffel Tower", "Louvre Museum", "Nice Beach"],
-# }
-
-# @app.get("/search")
-# def get_destinations(destination: str):
-#     places = destinations_data.get(destination, [])
-#     return places
-
-
-# @app.get("/destinations")
-# def get_destination_keys():
-#     return {"destinations": list(destinations_data.keys())}
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
