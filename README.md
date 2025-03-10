@@ -37,7 +37,7 @@ npm run dev
 
 📌 Features
 
-AI-powered travel itinerary generation
-Search for destinations
-Interactive and user-friendly UI
-FastAPI backend with Next.js frontend
+- AI-powered travel itinerary generation
+- Search for destinations
+- Interactive and user-friendly UI
+- FastAPI backend with Next.js frontend
