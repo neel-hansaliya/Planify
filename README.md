@@ -35,8 +35,8 @@ Step 4: Run the Frontend
 
 npm run dev
 
-
 📌 Features
+
 AI-powered travel itinerary generation
 Search for destinations
 Interactive and user-friendly UI
