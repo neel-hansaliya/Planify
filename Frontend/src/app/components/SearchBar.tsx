@@ -218,14 +218,14 @@ export default function SearchBar() {
         value={date}
         onChange={(e) => setDate(e.target.value)}
       />
-      <input
+      {/* <input
         type="number"
         placeholder="Guest"
         className="p-2 border rounded w-20"
         value={guests}
         onChange={(e) => setGuests(Number(e.target.value))}
         min={1}
-      />
+      /> */}
       <button
         className="bg-black hover:bg-gray-600 cursor-pointer text-white px-4 py-2 rounded flex items-center justify-center w-28"
         onClick={handleSearch}

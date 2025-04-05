@@ -1,15 +1,21 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {},
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.holidify.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.travelstart.co.za',
+      },
+    ],
   },
-  plugins: [],
 };
 
-// next.config.js
-module.exports = {
-  images: {
-    domains: ['www.holidify.com'], // Add any domains you are using here
-  },
-}
+module.exports = nextConfig;
