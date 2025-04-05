@@ -23,6 +23,8 @@ cd planify
 Step 2: Start the Backend
 
 cd backend
+create virtual enviroment
+pip install -r requirements.txt
 uvicorn main:app --reload
 
 Step 3: Install Frontend Dependencies
